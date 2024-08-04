@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+.ncontainer {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.footer {
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer p {
+    color: #8a8a8a;
+}
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3 {
+    flex: 1;
+    margin-right: 20px;
+}
+.cart-page {
+    margin: 80px auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+th {
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: green;
+    font-weight: normal;
+}
+td {
+    padding: 10px 5px;
+}
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a {
+    color: red;
+    font-size: 12px;
+}
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table {
+    border-top: 3px solid green;
+    width: 100%;
+    max-width: 370px;
+}
+td:last-child {
+    text-align: right;
+}
+th:last-child {
+    text-align: right;
+}
+</style>
+</head>
+<body>
+<div class="ncontainer">
+    <div class="navbar">    
+        <nav>
+            <ul>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <div>
+                        <p>Dosa</p>
+                        <small>Price: 60</small><br>
+                        <a href="#">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>60</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>65</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="footer">
+    <div class="ncontainer">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Restaurant timings</h3>
+                <p>Monday—Thursday: 08:00 — 22:00<br> 
+                Friday—Saturday: 09:00 — 23:00<br>
+                Sunday: 8:00 — 23:00</p>
+            </div>
+            <div class="footer-col-2">
+                <h3>Customer Care</h3>
+                <p>Talk to us:<br>
+                1-2346234881</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Visit our place</h3>
+                <p>14, Anna Nagar<br>
+                2nd cross street<br>
+                Chennai-600090</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    background-image: url('https://www.thestatesman.com/wp-content/uploads/2022/02/Tasty-South-Indian-break-fast-Photo-istock-1-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+.navbar {
+display: flex;
+align-items: center;
+padding: 20px;
+}
+nav{
+flex: 1;
+text-align: right;
+}
+nav ul{
+display: inline-block;
+list-style-type: none;
+}
+nav ul li{
+display: inline-block;
+margin-right: 20px;
+}
+a{
+text-decoration: none;
+color: #555;
+}
+.ncontainer{
+max-width: 1300px;
+margin: auto;
+padding-left: 25px;
+padding-right: 25px;
+}
+.about-section {
+display: flex;
+align-items: center;
+background-color: #f3f3f3c0;
+padding: 50px 30px;
+}
+.about-section h3 {
+text-align: center;
+width: 60%;
+margin: auto;
+font-family: 'Big Shoulders Text', cursive;
+font-size: 1.8em;
+text-transform: uppercase;
+}
+.about-section p{
+text-align: center;
+width: 60%;
+margin: auto;
+font-family: 'Big Shoulders Text', cursive;
+font-size: 1.0em;
+text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #e04000;
+}
+
+.footer{
+background: black;
+color: #8a8a8a;
+font-size: 14px;
+padding: 20px;
+
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+.footer p{
+color: #8a8a8a;
+}
+.footer h3{
+color: #fff;
+margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3{
+flex: 1;
+margin-right: 20px; 
+}
+
+
+

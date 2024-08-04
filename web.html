@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dosa Express | Homepage</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 20px;
+}
+.hero {
+    background-image: url('https://www.thestatesman.com/wp-content/uploads/2022/02/Tasty-South-Indian-break-fast-Photo-istock-1-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+    margin: 60px auto 20px;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+nav{
+flex: 1;
+text-align: right;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.navbar ul {
+    margin: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+}
+nav ul li{
+display: inline-block;
+margin-right: 20px;
+}
+a{
+text-decoration: none;
+color: #555;
+}
+.ncontainer{
+max-width: 1300px;
+margin: 20px auto;
+padding-left: 25px;
+padding-right: 25px;
+}
+
+.about-section {
+display: flex;
+align-items: center;
+background-color: #f3f3f3c0;
+padding: 50px 30px;
+font-family: 'Roboto';
+}
+.about-section h3 {
+text-align: center;
+width: 60%;
+margin: auto;
+font-family: 'Big Shoulders Text', cursive;
+font-size: 1.8em;
+text-transform: uppercase;
+}
+.about-section p{
+text-align: center;
+width: 60%;
+margin: auto;
+font-size: 1.2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #e04000;
+}
+
+.footer{
+background: black;
+color: #8a8a8a;
+font-size: 14px;
+padding: 20px;
+
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+.footer p{
+color: #8a8a8a;
+}
+.footer h3{
+color: #fff;
+margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3{
+flex: 1;
+margin-right: 20px; 
+}
+
+</style>
+</head>
+<body>
+  <div class="ncontainer">
+    <div class="navbar">    
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-sToIeG8sNT4n9RFff4XXxHh4eZCpeCmQ&usqp=CAU"  height="75px" width="75px">
+      </div>
+      <nav>
+        <ul class="nav-flex-row">
+          <li class="nav-item">
+            <a href="Menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="reservation.html">Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="Menu.html#cart-page"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/205/815/small/shopping-cart-icon-free-vector.jpg" width="30px" height="30px"></a>
+  
+    </div>
+  </div>
+
+<div class="hero">
+    <div class="container">
+        <h1>THE DOSA EXPRESS</h1>
+        <p>Experience the flavour of South India</p>
+    </div>
+</div>
+<section class="about-section">
+  <article>
+    <h3>
+        Here's why you should visit us:
+    </h3>
+    <p>
+      Experience the vibrant flavors of South India at our restaurant, 
+      where every dish is a culinary journey. 
+      Indulge in aromatic spices, delicate dosas, 
+      fluffy idlis, and rich curries that tantalize your taste buds. 
+      Immerse yourself in the warmth of our hospitality and savor the authentic flavors of the region.
+    </p>
+  </article>
+</section>
+<div class="container">
+  <h1>Place your order here!</h1>
+  <p>Explore our delicious menu and enjoy fast delivery to your doorstep! </p>
+  <a href="menu.html" class="cta-button">View Menu</a>
+</div>
+  
+  <div class="footer">
+    <div class="ncontainer">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Restaurant timings</h3>
+        <p>Monday—Thursday: 07:00 - 22:00<br> 
+          Friday—Saturday: 07:00 - 23:00<br>
+          Sunday: 8:00 - 23:00</p>
+      </div>
+      <div class="footer-col-2">
+        <h3>Customer Care</h3>
+        <p>1-2346234881</p>
+      </div>
+      <div class="footer-col-3">
+        <h3>Visit us</h3>
+        <p>14, Anna Nagar<br>
+          2nd cross street<br>
+          Chennai-600090</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<script>
+  if (window.location.hash && window.location.hash === "#cart-page") {
+    function scrollToCartSection() {
+      var targetElement = document.getElementById("cart-page");
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setTimeout(scrollToCartSection, 100);
+  }
+</script>
+
+</body>
+</html>

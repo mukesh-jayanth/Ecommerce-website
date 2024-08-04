@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        padding-top: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 60px auto 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+  nav{
+    flex: 1;
+    text-align: right;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.navbar ul {
+    margin: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: #555;
+  }
+  .ncontainer{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    textarea {
+        resize: vertical;
+        height: 150px;
+    }
+    button[type="submit"] {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #e04000;
+  }
+  .footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 20px;
+
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer p{
+    color: #8a8a8a;
+  }
+  .footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .footer-col-1, .footer-col-2, .footer-col-3{
+   flex: 1;
+   margin-right: 20px; 
+  }
+  
+    
+</style>
+</head>
+<body>
+    <div class="ncontainer">
+        <div class="navbar">  
+          <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6R-sToIeG8sNT4n9RFff4XXxHh4eZCpeCmQ&usqp=CAU"  height="75px" width="75px">
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="web.html">Home</a>
+              </li>
+              <li>
+                <a href="Menu.html">Menu</a>
+              </li>
+              <li>
+                <a href="reservation.html">Reservation</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="Menu.html#cart-page"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/205/815/small/shopping-cart-icon-free-vector.jpg" width="30px" height="30px"></a>
+          </div>
+        </div>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <form action="/info" method="post" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z]+" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required maxlength="500"></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var contactForm = document.querySelector("#contactForm");
+    
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          var myName = document.querySelector("#name");
+          var myEmail = document.querySelector("#email");
+          var myMessage = document.querySelector("#message");
+          
+          if (contactForm.checkValidity()) {
+            var obj = {
+              name: myName.value,
+              email: myEmail.value,
+              message: myMessage.value
+              };
+    
+            fetch("/info", {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+              body: JSON.stringify(obj),
+            })
+              .then(function (response) {
+                if (response.ok) {
+                  alert("Message Sent!");
+                  contactForm.reset();
+                } else {
+                  throw new Error("Error occurred while sending message");
+                }
+              })
+              .catch(function (error) {
+                alert(error.message);
+              });
+          } else {
+            var invalidFields = contactForm.querySelectorAll(":invalid");
+            invalidFields.forEach(function (field) {
+              field.reportValidity();
+            });
+          }
+        });
+      });
+      if (window.location.hash && window.location.hash === "#cart-page") {
+    function scrollToCartSection() {
+      var targetElement = document.getElementById("cart-page");
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setTimeout(scrollToCartSection, 100);
+  }
+
+    </script>
+</div>
+
+<div class="footer">
+  <div class="ncontainer">
+  <div class="row">
+    <div class="footer-col-1">
+      <h3>Restaurant timings</h3>
+      <p>Monday—Thursday: 07:00 - 22:00<br> 
+        Friday—Saturday: 07:00 - 23:00<br>
+        Sunday: 8:00 - 23:00</p>
+    </div>
+    <div class="footer-col-2">
+      <h3>Customer Care</h3>
+      <p>1-2346234881</p>
+    </div>
+    <div class="footer-col-3">
+      <h3>Visit us</h3>
+      <p>14, Anna Nagar<br>
+        2nd cross street<br>
+        Chennai-600090</p>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
